@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="edu.shifan.mapper.GradeMapper">
+    <select id="findAll" resultType="edu.shifan.pojo.Grade">
+        SELECT * FROM sys_grade order by grade_id
+    </select>
+</mapper>
