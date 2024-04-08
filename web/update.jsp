@@ -63,9 +63,6 @@
                 <td>
                     <select name="gradeId">
                         <option value="0">---请选择---</option>
-                        <c:forEach items="${list}" var="g">
-                            <option value="${g.gradeId}">${g.gradeName}</option>
-                        </c:forEach>
                     </select>
                 </td>
             </tr>
