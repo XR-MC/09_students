@@ -10,7 +10,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>学生管理系统</title>
     <style type="text/css">
       .grid{
         width: 100%;
@@ -21,6 +21,10 @@
         padding: 3px 5px;
         border:solid 1px cadetblue;
       }
+      a,th,td{
+        font-family: 楷体;text-align: center;color: black;font-size: x-large;
+      }
+
     </style>
   </head>
   <body>
@@ -50,7 +54,7 @@
           <td>${l.state}</td>
           <td>
             <a href="#">删除</a>&nbsp;
-            <a href="#">修改</a>
+            <a href="load?id=${l.stuNo}">修改</a>
           </td>
         </tr>
       </c:forEach>

@@ -20,4 +20,7 @@ public interface StudentMapper {
      * @return
      */
     List<Student> findAll();
+
+    //按id查找学生信息
+    Student findById(int id);
 }

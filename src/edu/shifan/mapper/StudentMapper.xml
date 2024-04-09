@@ -14,4 +14,10 @@
     <select id="findAll" resultType="edu.shifan.pojo.Student">
         select * from sys_students
     </select>
+
+    <select id="findById" resultType="edu.shifan.pojo.Student" parameterType="int">
+        SELECT * FROM sys_students where stu_no=#{id}
+    </select>
+
+
 </mapper>

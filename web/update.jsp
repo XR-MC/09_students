@@ -9,7 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>新增学生信息</title>
+    <title>修改学生信息</title>
     <style type="text/css">
         .grid{
             width: 600px;
@@ -26,17 +26,20 @@
             text-align: right;
             background: lightgray;
         }
+        a,th,td{
+            font-family: 楷体;color: black;font-size: x-large;
+        }
 
     </style>
 </head>
 <body>
     <form method="post" action="add">
         <table class="grid">
-            <caption>新增学生信息</caption>
+            <caption>修改学生信息</caption>
             <tr>
                 <th>姓名：</th>
                 <td>
-                    <input type="text" name="userName" />
+                    <input type="text" name="userName" value="${student.stuName}"/>
                 </td>
             </tr>
             <tr>
@@ -49,13 +52,13 @@
             <tr>
                 <th>年龄：</th>
                 <td>
-                    <input type="text" name="age" />
+                    <input type="text" name="age" value="${student.age}"/>
                 </td>
             </tr>
             <tr>
                 <th>联系电话：</th>
                 <td>
-                    <input type="text" name="tel" />
+                    <input type="text" name="tel" value="${student.tel}"/>
                 </td>
             </tr>
             <tr>
@@ -70,7 +73,7 @@
             <tr>
                 <th>家庭住址：</th>
                 <td>
-                    <input type="text" name="address" />
+                    <input type="text" name="address" value="${student.address}"/>
                 </td>
             </tr>
             <tr>

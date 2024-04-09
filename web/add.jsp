@@ -27,6 +27,9 @@
             background: lightgray;
         }
 
+        a,th,td{
+            font-family: 楷体;;color: black;font-size: x-large;
+        }
     </style>
 </head>
 <body>
