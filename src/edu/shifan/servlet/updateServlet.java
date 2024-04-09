@@ -30,7 +30,7 @@ public class updateServlet extends HttpServlet {
         stu.setAge(Integer.parseInt(req.getParameter("age")));
         stu.setTel(req.getParameter("tel"));
         stu.setAddress(req.getParameter("address"));
-        stu.setGradeId(Integer.parseInt(req.getParameter("gradeid")));
+        stu.setGradeId(Integer.parseInt(req.getParameter("gradeId")));
         stu.setStuNo(Integer.parseInt(req.getParameter("stuNo")));
 
         System.out.println("update");

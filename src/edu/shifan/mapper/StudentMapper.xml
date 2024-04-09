@@ -12,8 +12,8 @@
 
     <update id="update" parameterType="edu.shifan.pojo.Student">
         update sys_students
-            set stu_name=#{stuName},gender=#{gender},age=#{age},tel=#{tel},grade_id=#{gradeId},address=#{address}
-            where stu_no=#{stuNo}
+            set stu_name=#{stuName},gender=#{gender},age=#{age},tel=#{tel},address=#{address},grade_id=#{gradeId}
+        where stu_no=#{stuNo}
     </update>
 
     <!-- 查询所有学生信息 -->
