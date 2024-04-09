@@ -19,6 +19,8 @@ public interface StudentMapper {
      * 查询所有学生信息
      * @return
      */
+
+    int update(Student student);
     List<Student> findAll();
 
     //按id查找学生信息

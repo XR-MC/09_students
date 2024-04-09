@@ -1,7 +1,9 @@
 package edu.shifan.servlet;
 
 
+import edu.shifan.mapper.GradeMapper;
 import edu.shifan.mapper.StudentMapper;
+import edu.shifan.pojo.Grade;
 import edu.shifan.pojo.Student;
 import edu.shifan.util.SessionUtil;
 import org.apache.ibatis.binding.MapperMethod;
@@ -13,6 +15,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet("/load")
 public class LoadServlet extends HttpServlet {
@@ -28,12 +31,18 @@ public class LoadServlet extends HttpServlet {
 
         Student stu = mapper.findById(id);
 
+        //获取年级mapper对象
+        GradeMapper gradeMapper = session.getMapper(GradeMapper.class);
+        //调用mapper方法
+        List<Grade> gradeList = gradeMapper.findAll();
 
         SessionUtil.close();
 
         System.out.println(stu);
 
+        //作用域
         req.setAttribute("student",stu);
+        req.setAttribute("grades",gradeList);
 
 
         req.getRequestDispatcher("update.jsp").forward(req,resp);

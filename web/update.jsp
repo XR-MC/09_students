@@ -11,6 +11,9 @@
 <head>
     <title>修改学生信息</title>
     <style type="text/css">
+
+
+
         .grid{
             width: 600px;
             margin: 0px auto;
@@ -33,7 +36,10 @@
     </style>
 </head>
 <body>
-    <form method="post" action="add">
+    <form method="post" action="update">
+<%--        使用隐藏域--%>
+        <input type="hidden" name="stuNo" value="${student.stuNo}" />
+
         <table class="grid">
             <caption>修改学生信息</caption>
             <tr>
@@ -45,8 +51,15 @@
             <tr>
                 <th>性别：</th>
                 <td>
-                    <input type="radio" name="gender" value="1"/>男
-                    <input type="radio" name="gender" value="0"/>女
+                    <c:if test="${student.gender}" var="flag">
+                        <input type="radio" name="gender" value="1" checked="checked"/>男
+                        <input type="radio" name="gender" value="0"/>女
+                    </c:if>
+                    <!-- jstl标签没有else语句，所以重复用if-->
+                    <c:if test="${!flag}">
+                        <input type="radio" name="gender" value="1"/>男
+                        <input type="radio" name="gender" value="0" checked="checked"/>女
+                    </c:if>
                 </td>
             </tr>
             <tr>
@@ -67,6 +80,22 @@
                     <select name="gradeId">
                         <option value="0">---请选择---</option>
 
+                        <c:forEach items="${grades}" var="g">
+<%--                            <option value="${g.gradeId}">${g.gradeName}</option>--%>
+
+
+<%--                            判断学生当前年级Id与所属Id是否相等 --%>
+<%--                            学生所属Id与当前下拉列表年级Id相同--%>
+                            <c:if test="${g.gradeId==student.gradeId}" var="flag1">
+                                <option value="${g.gradeId}" selected="selected">${g.gradeName}</option>
+                            </c:if>
+
+<%--                            学生所属Id与当前下拉列表年级Id不一致--%>
+                            <c:if test="${!flag1}">
+                                <option value="${g.gradeId}">${g.gradeName}</option>
+                            </c:if>
+
+                        </c:forEach>
                     </select>
                 </td>
             </tr>
