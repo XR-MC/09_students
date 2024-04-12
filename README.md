@@ -6,19 +6,25 @@
 
 
 
-进度：新增学生——>修改学生
+进度：新增学生——>修改学生——>删除学生——>查询
 
 
 
 ### 新增学生
 
-
-
-![1](README.assets/1-17128550373531.gif)
+![新增](README.assets/新增.gif)
 
 ### 修改学生
 
-![2](README.assets/2.gif)
+![修改](README.assets/修改.gif)
+
+### 删除学生
+
+![删除](README.assets/删除.gif)
+
+### 查询
+
+![查询](README.assets/查询.gif)
 
 PS：苦逼大学生还没学完，再学一学期。
 

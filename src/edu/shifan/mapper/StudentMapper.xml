@@ -26,4 +26,8 @@
     </select>
 
 
+    <delete id="delById" parameterType="int">
+        delete from sys_students where stu_no=#{id}
+    </delete>
+
 </mapper>

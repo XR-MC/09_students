@@ -21,6 +21,9 @@ public interface StudentMapper {
      */
 
     int update(Student student);
+
+    int delById(int id);
+
     List<Student> findAll();
 
     //按id查找学生信息

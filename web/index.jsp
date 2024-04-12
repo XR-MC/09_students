@@ -25,9 +25,23 @@
         font-family: 楷体;text-align: center;color: black;font-size: x-large;
       }
 
+
+      .box{
+        padding: 15px;
+        background: ghostwhite;
+        border: solid 1px gray;
+        margin-bottom: 30px;
+      }
     </style>
   </head>
   <body>
+    <form method="get">
+      <div class="box">
+        姓名：<input type="text" name="stuName" />&nbsp;&nbsp;
+        <input type="submit" value="查询" />
+        <input type="reset" value="清空" />
+      </div>
+    </form>
     <a href="init">新增学生信息</a>
     <table class="grid">
       <tr>
@@ -53,7 +67,7 @@
           <td>${l.address}</td>
           <td>${l.state}</td>
           <td>
-            <a href="#">删除</a>&nbsp;
+            <a href="del?id=${l.stuNo}">删除</a>&nbsp;
             <a href="load?id=${l.stuNo}">修改</a>
           </td>
         </tr>
